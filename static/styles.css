@@ -305,3 +305,10 @@ body {
     max-width: 280px;
   }
 }
+@media (max-width: 768px) {
+  .product-image {
+    width: 100%;
+    height: auto; /* Yükseklik sabitlenmesin */
+    object-fit: contain;
+  }
+}
