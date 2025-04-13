@@ -11,7 +11,7 @@ let originalProducts = [];
 let filteredProducts = [];
 
 async function fetchProducts() {
-  const response = await fetch("http://localhost:5001/products/with-price");
+  const response = await fetch("/products/with-price");
   const data = await response.json();
   originalProducts = data;
   filteredProducts = [...originalProducts];
