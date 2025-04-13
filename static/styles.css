@@ -272,19 +272,24 @@ body {
   }
 
   .carousel {
-    flex-wrap: nowrap;
-    min-width: auto;
-    gap: 10px;
+    overflow-x: auto;
+    padding: 0 10px;
+    justify-content: flex-start;
   }
 
   .product-card {
     flex: 0 0 80%;
     margin: 0 auto;
+    max-width: 350px;
   }
 
   .product-image {
     width: 100%;
     height: auto;
+    max-height: 250px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
   }
 
   .arrow {
