@@ -266,40 +266,42 @@ body {
 
 @media (max-width: 768px) {
   .carousel-container {
-    min-width: auto;
-    padding: 10px 0;
-    flex-direction: column;
+    padding: 0 10px;
   }
 
   .carousel {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 0;
+    padding: 0;
     overflow-x: auto;
-    padding: 0 10px;
-    justify-content: flex-start;
   }
 
   .product-card {
-    flex: 0 0 80%;
+    flex: 0 0 100%;
+    max-width: 360px;
     margin: 0 auto;
-    max-width: 350px;
   }
 
   .product-image {
     width: 100%;
+    max-width: 320px;
     height: auto;
-    max-height: 250px;
+    max-height: 240px;
     object-fit: contain;
     display: block;
     margin: 0 auto;
+    border-radius: 20px;
   }
 
   .arrow {
     font-size: 36px;
-    padding: 4px;
+    padding: 6px;
   }
 
   .filter-bar {
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
   }
 
   #sort-select,
@@ -307,13 +309,13 @@ body {
   #max-price,
   #price-filter-btn {
     width: 100%;
-    max-width: 280px;
+    max-width: 300px;
   }
-}
-@media (max-width: 768px) {
-  .product-image {
-    width: 100%;
-    height: auto; /* Yükseklik sabitlenmesin */
-    object-fit: contain;
+
+  .product-title,
+  .product-price,
+  .color-label,
+  .product-rating {
+    text-align: center;
   }
 }
