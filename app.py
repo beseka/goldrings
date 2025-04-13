@@ -67,7 +67,7 @@ def get_price_by_name():
 
     product_name = product_name.strip()
 
-    file_path = os.path.join(os.path.dirname(__file__), '../products.json')
+    file_path = os.path.join(os.path.dirname(__file__), 'products.json')
     with open(file_path, 'r') as file:
         products = json.load(file)
 
@@ -86,14 +86,14 @@ def get_price_by_name():
 
 @app.route('/products', methods=['GET'])
 def get_all_products():
-    file_path = os.path.join(os.path.dirname(__file__), '../products.json')
+    file_path = os.path.join(os.path.dirname(__file__), 'products.json')
     with open(file_path, 'r') as file:
         products = json.load(file)
     return jsonify(products), 200
 
 @app.route('/products/with-price', methods=['GET'])
 def get_all_products_with_price():
-    file_path = os.path.join(os.path.dirname(__file__), '../products.json')
+    file_path = os.path.join(os.path.dirname(__file__), 'products.json')
     with open(file_path, 'r') as file:
         products = json.load(file)
 
@@ -110,3 +110,5 @@ def get_all_products_with_price():
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
+
+#updated
