@@ -11,7 +11,7 @@ CORS(app)
 
 cached_gold_price = None
 cached_time = 0
-CACHE_DURATION = 18000
+CACHE_DURATION = 54000
 
 GOLD_API_KEY = "goldapi-8piosm9g2pm8i-io"
 GOLD_API_URL = "https://www.goldapi.io/api/XAU/USD"
