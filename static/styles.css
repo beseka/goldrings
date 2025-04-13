@@ -267,41 +267,54 @@ body {
 @media (max-width: 768px) {
   .carousel-container {
     width: 100%;
+    padding: 0;
+    margin: 0;
     overflow: hidden;
-    padding: 0 12px;
-    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
   }
 
   .carousel {
     display: flex;
-    gap: 12px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    padding-bottom: 10px;
-  }
-
-  .carousel::-webkit-scrollbar {
-    display: none; /* scroll barı gizle */
+    flex-direction: row;
+    overflow-x: hidden; /* Scroll kapalı artık */
+    gap: 0;
+    width: 100%;
+    max-width: 420px; /* mobilde ekran oranına göre sabitle */
+    box-sizing: border-box;
+    justify-content: center;
   }
 
   .product-card {
     flex: 0 0 100%;
-    scroll-snap-align: center;
     max-width: 100%;
     box-sizing: border-box;
+    padding: 10px;
   }
 
   .product-image {
     width: 100%;
+    max-width: 100%;
     height: auto;
     max-height: 240px;
     object-fit: contain;
     border-radius: 20px;
   }
 
+  .product-title,
+  .product-price,
+  .color-label,
+  .product-rating {
+    text-align: center;
+  }
+
+  .arrow {
+    display: none;
+  }
+
   .filter-bar {
     flex-direction: column;
+    align-items: center;
     gap: 10px;
     padding: 0 16px;
   }
@@ -313,11 +326,5 @@ body {
     width: 100%;
     max-width: 320px;
   }
-
-  .product-title,
-  .product-price,
-  .color-label,
-  .product-rating {
-    text-align: center;
-  }
 }
+
