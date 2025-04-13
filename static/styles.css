@@ -263,3 +263,45 @@ body {
   margin-top: 20px;
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .carousel-container {
+    min-width: auto;
+    padding: 10px 0;
+    flex-direction: column;
+  }
+
+  .carousel {
+    flex-wrap: nowrap;
+    min-width: auto;
+    gap: 10px;
+  }
+
+  .product-card {
+    flex: 0 0 80%;
+    margin: 0 auto;
+  }
+
+  .product-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .arrow {
+    font-size: 36px;
+    padding: 4px;
+  }
+
+  .filter-bar {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #sort-select,
+  #min-price,
+  #max-price,
+  #price-filter-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
