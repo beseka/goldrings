@@ -1,0 +1,265 @@
+/* styles.css */
+@font-face {
+  font-family: 'Avenir';
+  src: url('/static/fonts/Avenir/Avenir-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/static/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Medium';
+  src: url('/static/fonts/Montserrat/Montserrat-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+body {
+  font-family: 'Avenir', sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-width: 1000px; 
+  padding: 20px 0;
+}
+
+.carousel {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  min-height: 100%; 
+  min-width: 1000px;
+}
+.carousel::-webkit-scrollbar {
+  height: 10px; 
+}
+
+.carousel::-webkit-scrollbar-track {
+  background: #e0e0e0;  
+  border-radius: 20px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background: #b9b9b9;  /* kaydırılabilir kısmın rengi */
+  border-radius: 20px;
+}
+
+.carousel::-webkit-scrollbar-thumb:hover {
+  background: #888;  /* hover rengi */
+}
+
+
+.product-card {
+  flex: 0 0 calc((100% - 110px) / 4);
+  background: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: left;
+}
+
+.product-image {
+  width: 90%;
+  border-radius: 20px;
+  height: 220px;
+  
+}
+
+.product-title {
+  font-size: 15px;
+  font-family: 'Montserrat Medium', sans-serif;
+  margin: 8px 0 4px;
+}
+
+.product-price {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  margin: 0 0 8px;
+}
+
+.color-picker {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.color-circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.color-circle.yellow {
+  background-color: #E6CA97;
+}
+.color-circle.white {
+  background-color: #D9D9D9;
+}
+.color-circle.rose {
+  background-color: #E1A4A9;
+}
+
+.color-label {
+  font-size: 12px;
+  
+  font-family: 'Avenir', sans-serif;
+  margin-bottom: 5px;
+}
+
+.star-wrapper {
+  position: relative;
+  display: inline-block;
+  font-size: 23px;
+  line-height: 1;
+}
+
+.stars-outer {
+  color: #D9D9D9; /* Gri: boş yıldızlar */
+}
+
+.stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #E6CA97; /* Sarı: dolu yıldızlar */
+  width: 0;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+}
+
+.arrow {
+  font-size: 50px;
+  color: #7a7a7a;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 2;
+}
+
+.arrow.left {
+  margin-right: 10px;
+}
+
+.arrow.right {
+  margin-left: 10px;
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#sort-select {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath fill='black' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px 6px;
+  padding-right: 30px;
+}
+
+#sort-select:hover {
+  border-color: #999;
+  background-color: #f0f0f0;
+}
+
+#min-price,
+#max-price {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  width: 90px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+#min-price:hover,
+#max-price:hover {
+  border-color: #999;
+  background-color: #f0f0f0;
+}
+
+#price-filter-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #e6ca97;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#price-filter-btn:hover {
+  background-color: #d6b77e;
+}
+.error-alert {
+  background-color: #ffe0e0;
+  color: #a94442;
+  font-family: 'Montserrat', sans-serif;
+  padding: 12px 20px;
+  border: 1px solid #f5c6c6;
+  border-radius: 12px;
+  margin-top: 20px;
+  text-align: center;
+}
