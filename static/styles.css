@@ -267,19 +267,20 @@ body {
 @media (max-width: 768px) {
   .carousel-container {
     width: 100%;
-    padding: 0 16px;
-    box-sizing: border-box;
+    max-width: 100%;
     overflow: hidden;
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
   }
 
   .carousel {
     display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
     gap: 16px;
-    padding: 10px 0;
-    margin: 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 0 16px;
     box-sizing: border-box;
   }
 
@@ -288,19 +289,19 @@ body {
   }
 
   .product-card {
-    flex: 0 0 90%;
-    max-width: 90%;
+    flex: 0 0 calc(100% - 32px); /* padding hesaba katıldı */
     scroll-snap-align: center;
-    background: #fff;
+    max-width: 100%;
+    box-sizing: border-box;
+    background: white;
     border-radius: 20px;
     padding: 10px;
-    margin: 0 auto;
-    box-sizing: border-box;
   }
 
   .product-image {
     width: 100%;
     height: auto;
+    max-height: 240px;
     object-fit: contain;
     border-radius: 20px;
   }
@@ -309,8 +310,15 @@ body {
     display: none;
   }
 
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px;
+  }
+
   .filter-bar {
     flex-direction: column;
+    align-items: center;
     gap: 10px;
     padding: 0 16px;
   }
@@ -329,12 +337,4 @@ body {
   .product-rating {
     text-align: center;
   }
-
-  .container {
-    padding: 16px;
-    box-sizing: border-box;
-  }
 }
-
-
-
